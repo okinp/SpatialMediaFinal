@@ -10,19 +10,21 @@
 #include "worm.h"
 
 worm::worm(ofxVec3f _pos, ofxVec3f _vel){
+	maxVel=8;
+	maxDist=10;
 	pos=_pos;
 	vel=_vel;
-	numOfparts=6;   // 
+	numOfparts=20;   // 
 	radius=8;
 	spacing=0;
 	Parts= new wormParts*[numOfparts];
 	for (int i=0; i<numOfparts; i++) {
-		Parts[i]=new wormParts(ofxVec3f(pos.x-i, pos.y,0));
+		Parts[i]=new wormParts(ofxVec3f(pos.x-i, pos.y,0), maxVel);
 	}
 }
 void worm::update(){
 	vel+=acc;
-	vel.limit(3);
+	vel.limit(maxVel);
 	Parts[0]->pos+=vel;
 
 	for (int i=1; i<numOfparts; i++) {

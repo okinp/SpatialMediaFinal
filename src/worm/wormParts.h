@@ -15,9 +15,10 @@
 
 class wormParts {
 public:
-	wormParts(ofxVec3f _pos);
+	wormParts(ofxVec3f _pos, float _maxVel);
 	void update(ofxVec3f _posOther);
 	void draw();
+	float maxVel;
 	ofxVec3f pos;
 	ofxVec3f acc;
 	ofxVec3f vel;

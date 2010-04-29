@@ -17,9 +17,10 @@ flowfield::flowfield(int r){
 		grid[i]=new ofxVec3f[cols];
 	}
 }
-void flowfield::init(){
+void flowfield::init(int maxMag){
 	// Reseed noise so we get a new flow field every time
 	noise.noiseSeed((int)ofRandom(0, 10000));
+	noise.noiseDetail(5);
 		float xoff = 0;
 		for (int i = 0; i < cols; i++) {
 			float yoff = 0;
@@ -27,7 +28,7 @@ void flowfield::init(){
 				// Use perlin noise to get an angle between 0 and 2 PI
 				float theta = ofMap(noise.noiseuf(xoff,yoff),0,1,0,TWO_PI);
 				// Polar to cartesian coordinate transformation to get x and y components of the vector
-				grid[j][i] = 10*ofxVec3f(cos(theta),sin(theta));
+				grid[j][i] = maxMag*ofxVec3f(cos(theta),sin(theta));
 				yoff += 0.1;
 			}
 			xoff += 0.1;

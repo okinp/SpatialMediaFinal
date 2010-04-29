@@ -9,14 +9,19 @@
 
 #include "wormParts.h"
 
-wormParts::wormParts(ofxVec3f _pos){
+wormParts::wormParts(ofxVec3f _pos, float _maxVel){
 	pos=_pos;
-	stiffness = 0.01; 
-	damping = 0.9;
+	stiffness = 4; 
+	damping = 1;
+	maxVel=_maxVel;
+	
 }
 void wormParts::update(ofxVec3f _posOther){
-	acc=stiffness*(_posOther-pos);
-	vel+=acc;
+	acc=_posOther-pos;
+	ofxVec3f normAcc=acc.getNormalized();
+	acc=stiffness*(_posOther-pos); //direction
+	vel+=5*normAcc;
+	vel.limit(maxVel);
 	vel=damping*vel;
 	pos+=vel;
 }

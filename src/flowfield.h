@@ -19,7 +19,7 @@ public:
 	int cols;
 	int resolution;
 	ofxVec3f **grid;
-	void init();
+	void init(int maxMag);
 	void draw();
 	void drawVector(ofxVec3f v, float x, float y, float scale);
 	ofxVec3f lookup(ofxVec3f look);

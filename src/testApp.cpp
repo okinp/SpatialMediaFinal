@@ -23,6 +23,12 @@ void testApp::update(){
 			ofxVec3f wPos=Worms[i]->Parts[0]->pos;
 			cout << wPos.x<< " ";
 			Worms[i]->acc=field->lookup(wPos);
+			//Adding a force towards the mouse  (we'll remove it later on);
+			//ofxVec3f diff= (ofxVec3f(mouseX, mouseY,0)-Worms[i]->Parts[0]->pos);
+			//diff.normalize();
+			//diff*=10;
+			//Worms[i]->acc+=diff;
+			////////////////////////////////
 			Worms[i]->update();
 		}
 	}
@@ -50,7 +56,7 @@ void testApp::keyPressed  (int key){
 		showField=!showField;
 	}
 	if (key=='n') {
-		field->init();
+		field->init(10);
 	}
 }
 

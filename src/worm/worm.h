@@ -18,8 +18,10 @@
 class worm{
 public:
 	worm(ofxVec3f _pos, ofxVec3f _vel);
+	float maxVel;
 	void update();
 	void draw();
+	int maxDist;
 	ofxVec3f vel;
 	ofxVec3f pos;
 	ofxVec3f acc;
