@@ -9,7 +9,6 @@
 #include "worm.h"
 #include "ofxPerlin.h"
 #include "target.h"
-
 class testApp : public ofBaseApp{
 	
 	public:
@@ -24,6 +23,9 @@ class testApp : public ofBaseApp{
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
 		void windowResized(int w, int h);
+	void audioReceived 	(float * input, int bufferSize, int nChannels); 
+	float volume;
+	int lastCount;
 	brush *myBrush;
 	flowfield *field;
 	bool showField;
@@ -35,6 +37,8 @@ class testApp : public ofBaseApp{
 	target myTarget;
 	bool moveTarget;
 	float forceTargetMagnitude;
+	ofImage grate;
+	float speed;
 };
 
 #endif

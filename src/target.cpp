@@ -11,8 +11,8 @@
 
 target::target(){
 	pos = ofxVec3f(0,0,0);
-	width=60;
-	height=120;
+	width=120;
+	height=150;
 }
 
 void target::draw(){

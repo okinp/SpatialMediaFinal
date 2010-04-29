@@ -20,7 +20,7 @@ flowfield::flowfield(int r){
 void flowfield::init(int maxMag){
 	// Reseed noise so we get a new flow field every time
 	noise.noiseSeed((int)ofRandom(0, 10000));
-	noise.noiseDetail(5);
+	noise.noiseDetail(15);
 		float xoff = 0;
 		for (int i = 0; i < cols; i++) {
 			float yoff = 0;

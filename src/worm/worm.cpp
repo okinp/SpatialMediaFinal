@@ -29,6 +29,7 @@ worm::~worm(){
 }
 void worm::update(){
 	vel+=acc;
+	vel+=ofxVec3f(ofRandom(-20, 20),ofRandom(-20, 20),0);
 	vel.limit(maxVel);
 	Parts[0]->pos+=vel;
 

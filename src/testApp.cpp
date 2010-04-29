@@ -4,6 +4,8 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 	ofSetWindowTitle("template project");
+	grate.loadImage("grate.png");
+	grate.setAnchorPercent(0.5, 0.5); 
 	ofBackground(0, 0, 0);
 	ofSetColor(255, 255, 255);
 	ofSetFrameRate(60); // if vertical sync is off, we can go a bit fast... this caps the framerate at 60fps.
@@ -13,10 +15,31 @@ void testApp::setup(){
 	noise.noiseSeed((int) ofRandom(0, 10000));
 	moveTarget =false;
 	forceTargetMagnitude=15;
+	ofSoundStreamSetup(0,2,this, 44100, 256, 4);		
+	volume = 0;
+	lastCount = 0;
+	
+}
+void testApp::audioReceived(float * input, int bufferSize, int nChannels){	
+	
+	volume = 0;
+	for (int i = 0; i < bufferSize; i++){
+		volume += ABS(input[i]);
+	}
+	volume = ofNormalize(volume, 0, 80);
+	
+	
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+	speed = ofMap(volume, 0, 1, 3000, 100);
+	
+	//cout << speed << endl;
+	if (!showField && lastCount + speed < ofGetElapsedTimeMillis()) {
+		Worms.push_back(new worm(ofxVec3f(mouseX,mouseY,0),ofxVec3f(ofRandom(-100, 200),ofRandom(-250, 250),0)));
+		lastCount = ofGetElapsedTimeMillis();
+	}	
 	if (showField) {
 		myBrush->pos.x=mouseX;
 		myBrush->pos.y=mouseY;
@@ -42,12 +65,7 @@ void testApp::update(){
 	}
 	///check if the worms are in the target or outside of the screen
 	
-	
-	
-	
-	
-	
-	
+
 	
 	if (moveTarget){
 		myTarget.pos=ofxVec3f(mouseX,mouseY,0);
@@ -56,6 +74,8 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
+	//fmyTarget.draw();
+	//grate.draw(myTarget.pos.x, myTarget.pos.y);
 	if (showField) {
 		myBrush->draw();
 		field->draw();
@@ -64,7 +84,7 @@ void testApp::draw(){
 			Worms[i]->draw();
 		}
 	}
-	myTarget.draw();
+	grate.draw(myTarget.pos.x, myTarget.pos.y);
 }
 
 
@@ -104,7 +124,7 @@ void testApp::mouseDragged(int x, int y, int button){
 void testApp::mousePressed(int x, int y, int button){
 	if (!showField) {
 		//w = new worm(ofxVec3f(x,y,0),ofxVec3f(0,0,0));
-		Worms.push_back(new worm(ofxVec3f(x,y,0),ofxVec3f(0,0,0)));
+		Worms.push_back(new worm(ofxVec3f(x,y,0),ofxVec3f(ofRandom(-100, 200),ofRandom(-250, 250),0)));
 		//particle p;
 		//p.pos.x=x;
 		//p.pos.y=y;
