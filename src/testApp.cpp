@@ -19,8 +19,8 @@ void testApp::update(){
 		myBrush->pos.y=mouseY;
 	} else {
 		for (int i=0; i<Worms.size(); i++) {
-			ofxVec3f wPos=Worms[i]->pos;
-			cout << wPos.x<< " "<<wPos.y;
+			ofxVec3f wPos=Worms[i]->Parts[0]->pos;
+			cout << wPos.x<< " ";
 			Worms[i]->acc=field->lookup(wPos);
 			Worms[i]->update();
 		}
@@ -69,8 +69,8 @@ void testApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
 	if (!showField) {
-		w = new worm(ofxVec3f(x,y,0),ofxVec3f(0,0,0));
-		Worms.push_back(w);
+		//w = new worm(ofxVec3f(x,y,0),ofxVec3f(0,0,0));
+		Worms.push_back(new worm(ofxVec3f(x,y,0),ofxVec3f(0,0,0)));
 		//particle p;
 		//p.pos.x=x;
 		//p.pos.y=y;
