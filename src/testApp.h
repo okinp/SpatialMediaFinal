@@ -7,6 +7,7 @@
 #include "flowfield.h"
 #include "particle.h"
 #include "worm.h"
+#include "ofxPerlin.h"
 
 class testApp : public ofBaseApp{
 	
@@ -27,7 +28,8 @@ class testApp : public ofBaseApp{
 	bool showField;
 	worm *w;
 	//vector <particle> Particles;
-	vector <worm*> Worms;	
+	vector <worm*> Worms;
+	ofxPerlin noise;
 };
 
 #endif

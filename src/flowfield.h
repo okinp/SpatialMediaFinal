@@ -11,6 +11,7 @@
 #define FLOWFIELD
 #include "ofMain.h"
 #include "ofxVectorMath.h"
+#include "ofxPerlin.h"
 class flowfield  {
 public:
 	flowfield(int r);
@@ -18,6 +19,7 @@ public:
 	int cols;
 	int resolution;
 	ofxVec3f **grid;
+	void init();
 	void draw();
 	void drawVector(ofxVec3f v, float x, float y, float scale);
 	ofxVec3f lookup(ofxVec3f look);
@@ -25,6 +27,7 @@ public:
 	void set(ofxVec3f look);
 	float constrain(float in, float min, float max);
 	ofxVec3f checkMe;
+	ofxPerlin noise;
 };
 
 

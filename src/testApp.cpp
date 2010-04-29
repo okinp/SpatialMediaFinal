@@ -10,6 +10,7 @@ void testApp::setup(){
 	myBrush=new brush(10);
 	field=new flowfield(20);
 	showField=true;
+	noise.noiseSeed((int) ofRandom(0, 10000));
 }
 
 //--------------------------------------------------------------
@@ -47,6 +48,9 @@ void testApp::keyPressed  (int key){
 	}
 	if (key=='c') {
 		showField=!showField;
+	}
+	if (key=='n') {
+		field->init();
 	}
 }
 

@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		171248DB11892F3400BEF94F /* worm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 171248D711892F3400BEF94F /* worm.cpp */; };
 		171248DC11892F3400BEF94F /* wormParts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 171248D911892F3400BEF94F /* wormParts.cpp */; };
+		171249FD118962EF00BEF94F /* ofxMatrix3x3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 171249F0118962EF00BEF94F /* ofxMatrix3x3.cpp */; };
+		171249FE118962EF00BEF94F /* ofxMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 171249F2118962EF00BEF94F /* ofxMatrix4x4.cpp */; };
+		171249FF118962EF00BEF94F /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 171249F7118962EF00BEF94F /* ofxQuaternion.cpp */; };
+		17124A101189630000BEF94F /* ofxPerlin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17124A081189630000BEF94F /* ofxPerlin.cpp */; };
+		17124A111189630000BEF94F /* ofxSimplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17124A0A1189630000BEF94F /* ofxSimplex.cpp */; };
 		17BE104A1188A6BD001858FB /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17BE10491188A6BD001858FB /* particle.cpp */; };
-		17FDFBE71180CEE900E94F4B /* ofxMatrix3x3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDFBDA1180CEE900E94F4B /* ofxMatrix3x3.cpp */; };
-		17FDFBE81180CEE900E94F4B /* ofxMatrix4x4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDFBDC1180CEE900E94F4B /* ofxMatrix4x4.cpp */; };
-		17FDFBE91180CEE900E94F4B /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDFBE11180CEE900E94F4B /* ofxQuaternion.cpp */; };
 		17FDFBEE1180CEFE00E94F4B /* brush.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDFBED1180CEFE00E94F4B /* brush.cpp */; };
 		17FDFBF31180CF0D00E94F4B /* flowfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDFBF21180CF0D00E94F4B /* flowfield.cpp */; };
 		E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE0A90E8CC67C009D7055 /* GLee.a */; };
@@ -90,22 +92,30 @@
 		171248D811892F3400BEF94F /* worm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = worm.h; sourceTree = "<group>"; };
 		171248D911892F3400BEF94F /* wormParts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wormParts.cpp; sourceTree = "<group>"; };
 		171248DA11892F3400BEF94F /* wormParts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wormParts.h; sourceTree = "<group>"; };
+		171249EE118962EF00BEF94F /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		171249F0118962EF00BEF94F /* ofxMatrix3x3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMatrix3x3.cpp; sourceTree = "<group>"; };
+		171249F1118962EF00BEF94F /* ofxMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMatrix3x3.h; sourceTree = "<group>"; };
+		171249F2118962EF00BEF94F /* ofxMatrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMatrix4x4.cpp; sourceTree = "<group>"; };
+		171249F3118962EF00BEF94F /* ofxMatrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMatrix4x4.h; sourceTree = "<group>"; };
+		171249F4118962EF00BEF94F /* ofxPoint2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPoint2f.h; sourceTree = "<group>"; };
+		171249F5118962EF00BEF94F /* ofxPoint3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPoint3f.h; sourceTree = "<group>"; };
+		171249F6118962EF00BEF94F /* ofxPoint4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPoint4f.h; sourceTree = "<group>"; };
+		171249F7118962EF00BEF94F /* ofxQuaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxQuaternion.cpp; sourceTree = "<group>"; };
+		171249F8118962EF00BEF94F /* ofxQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxQuaternion.h; sourceTree = "<group>"; };
+		171249F9118962EF00BEF94F /* ofxVec2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec2f.h; sourceTree = "<group>"; };
+		171249FA118962EF00BEF94F /* ofxVec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec3f.h; sourceTree = "<group>"; };
+		171249FB118962EF00BEF94F /* ofxVec4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec4f.h; sourceTree = "<group>"; };
+		171249FC118962EF00BEF94F /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVectorMath.h; sourceTree = "<group>"; };
+		17124A051189630000BEF94F /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		17124A071189630000BEF94F /* ofxNoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNoise.h; sourceTree = "<group>"; };
+		17124A081189630000BEF94F /* ofxPerlin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxPerlin.cpp; sourceTree = "<group>"; };
+		17124A091189630000BEF94F /* ofxPerlin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPerlin.h; sourceTree = "<group>"; };
+		17124A0A1189630000BEF94F /* ofxSimplex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxSimplex.cpp; sourceTree = "<group>"; };
+		17124A0B1189630000BEF94F /* ofxSimplex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSimplex.h; sourceTree = "<group>"; };
+		17124A0C1189630000BEF94F /* ofxSimplexTables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSimplexTables.h; sourceTree = "<group>"; };
+		17124A0D1189630000BEF94F /* ofxSinCosLUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSinCosLUT.h; sourceTree = "<group>"; };
 		17BE10481188A6BD001858FB /* particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
 		17BE10491188A6BD001858FB /* particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle.cpp; sourceTree = "<group>"; };
-		17FDFBD81180CEE900E94F4B /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
-		17FDFBDA1180CEE900E94F4B /* ofxMatrix3x3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMatrix3x3.cpp; sourceTree = "<group>"; };
-		17FDFBDB1180CEE900E94F4B /* ofxMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMatrix3x3.h; sourceTree = "<group>"; };
-		17FDFBDC1180CEE900E94F4B /* ofxMatrix4x4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMatrix4x4.cpp; sourceTree = "<group>"; };
-		17FDFBDD1180CEE900E94F4B /* ofxMatrix4x4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMatrix4x4.h; sourceTree = "<group>"; };
-		17FDFBDE1180CEE900E94F4B /* ofxPoint2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPoint2f.h; sourceTree = "<group>"; };
-		17FDFBDF1180CEE900E94F4B /* ofxPoint3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPoint3f.h; sourceTree = "<group>"; };
-		17FDFBE01180CEE900E94F4B /* ofxPoint4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPoint4f.h; sourceTree = "<group>"; };
-		17FDFBE11180CEE900E94F4B /* ofxQuaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxQuaternion.cpp; sourceTree = "<group>"; };
-		17FDFBE21180CEE900E94F4B /* ofxQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxQuaternion.h; sourceTree = "<group>"; };
-		17FDFBE31180CEE900E94F4B /* ofxVec2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec2f.h; sourceTree = "<group>"; };
-		17FDFBE41180CEE900E94F4B /* ofxVec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec3f.h; sourceTree = "<group>"; };
-		17FDFBE51180CEE900E94F4B /* ofxVec4f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVec4f.h; sourceTree = "<group>"; };
-		17FDFBE61180CEE900E94F4B /* ofxVectorMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxVectorMath.h; sourceTree = "<group>"; };
 		17FDFBEC1180CEFE00E94F4B /* brush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brush.h; sourceTree = "<group>"; };
 		17FDFBED1180CEFE00E94F4B /* brush.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = brush.cpp; sourceTree = "<group>"; };
 		17FDFBF11180CF0D00E94F4B /* flowfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flowfield.h; sourceTree = "<group>"; };
@@ -197,42 +207,65 @@
 			path = worm;
 			sourceTree = "<group>";
 		};
+		171249ED118962EF00BEF94F /* ofxVectorMath */ = {
+			isa = PBXGroup;
+			children = (
+				171249EE118962EF00BEF94F /* install.xml */,
+				171249EF118962EF00BEF94F /* src */,
+			);
+			path = ofxVectorMath;
+			sourceTree = "<group>";
+		};
+		171249EF118962EF00BEF94F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				171249F0118962EF00BEF94F /* ofxMatrix3x3.cpp */,
+				171249F1118962EF00BEF94F /* ofxMatrix3x3.h */,
+				171249F2118962EF00BEF94F /* ofxMatrix4x4.cpp */,
+				171249F3118962EF00BEF94F /* ofxMatrix4x4.h */,
+				171249F4118962EF00BEF94F /* ofxPoint2f.h */,
+				171249F5118962EF00BEF94F /* ofxPoint3f.h */,
+				171249F6118962EF00BEF94F /* ofxPoint4f.h */,
+				171249F7118962EF00BEF94F /* ofxQuaternion.cpp */,
+				171249F8118962EF00BEF94F /* ofxQuaternion.h */,
+				171249F9118962EF00BEF94F /* ofxVec2f.h */,
+				171249FA118962EF00BEF94F /* ofxVec3f.h */,
+				171249FB118962EF00BEF94F /* ofxVec4f.h */,
+				171249FC118962EF00BEF94F /* ofxVectorMath.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		17124A001189630000BEF94F /* ofxNoise */ = {
+			isa = PBXGroup;
+			children = (
+				17124A051189630000BEF94F /* LICENSE.txt */,
+				17124A061189630000BEF94F /* src */,
+			);
+			path = ofxNoise;
+			sourceTree = "<group>";
+		};
+		17124A061189630000BEF94F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				17124A071189630000BEF94F /* ofxNoise.h */,
+				17124A081189630000BEF94F /* ofxPerlin.cpp */,
+				17124A091189630000BEF94F /* ofxPerlin.h */,
+				17124A0A1189630000BEF94F /* ofxSimplex.cpp */,
+				17124A0B1189630000BEF94F /* ofxSimplex.h */,
+				17124A0C1189630000BEF94F /* ofxSimplexTables.h */,
+				17124A0D1189630000BEF94F /* ofxSinCosLUT.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		17FDFBD41180CEAD00E94F4B /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				17FDFBD71180CEE900E94F4B /* ofxVectorMath */,
+				17124A001189630000BEF94F /* ofxNoise */,
+				171249ED118962EF00BEF94F /* ofxVectorMath */,
 			);
 			name = addons;
-			sourceTree = "<group>";
-		};
-		17FDFBD71180CEE900E94F4B /* ofxVectorMath */ = {
-			isa = PBXGroup;
-			children = (
-				17FDFBD81180CEE900E94F4B /* install.xml */,
-				17FDFBD91180CEE900E94F4B /* src */,
-			);
-			name = ofxVectorMath;
-			path = ../../../addons/ofxVectorMath;
-			sourceTree = SOURCE_ROOT;
-		};
-		17FDFBD91180CEE900E94F4B /* src */ = {
-			isa = PBXGroup;
-			children = (
-				17FDFBDA1180CEE900E94F4B /* ofxMatrix3x3.cpp */,
-				17FDFBDB1180CEE900E94F4B /* ofxMatrix3x3.h */,
-				17FDFBDC1180CEE900E94F4B /* ofxMatrix4x4.cpp */,
-				17FDFBDD1180CEE900E94F4B /* ofxMatrix4x4.h */,
-				17FDFBDE1180CEE900E94F4B /* ofxPoint2f.h */,
-				17FDFBDF1180CEE900E94F4B /* ofxPoint3f.h */,
-				17FDFBE01180CEE900E94F4B /* ofxPoint4f.h */,
-				17FDFBE11180CEE900E94F4B /* ofxQuaternion.cpp */,
-				17FDFBE21180CEE900E94F4B /* ofxQuaternion.h */,
-				17FDFBE31180CEE900E94F4B /* ofxVec2f.h */,
-				17FDFBE41180CEE900E94F4B /* ofxVec3f.h */,
-				17FDFBE51180CEE900E94F4B /* ofxVec4f.h */,
-				17FDFBE61180CEE900E94F4B /* ofxVectorMath.h */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		E45BE0360E8CC5DE009D7055 /* libs */ = {
@@ -604,14 +637,16 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
-				17FDFBE71180CEE900E94F4B /* ofxMatrix3x3.cpp in Sources */,
-				17FDFBE81180CEE900E94F4B /* ofxMatrix4x4.cpp in Sources */,
-				17FDFBE91180CEE900E94F4B /* ofxQuaternion.cpp in Sources */,
 				17FDFBEE1180CEFE00E94F4B /* brush.cpp in Sources */,
 				17FDFBF31180CF0D00E94F4B /* flowfield.cpp in Sources */,
 				17BE104A1188A6BD001858FB /* particle.cpp in Sources */,
 				171248DB11892F3400BEF94F /* worm.cpp in Sources */,
 				171248DC11892F3400BEF94F /* wormParts.cpp in Sources */,
+				171249FD118962EF00BEF94F /* ofxMatrix3x3.cpp in Sources */,
+				171249FE118962EF00BEF94F /* ofxMatrix4x4.cpp in Sources */,
+				171249FF118962EF00BEF94F /* ofxQuaternion.cpp in Sources */,
+				17124A101189630000BEF94F /* ofxPerlin.cpp in Sources */,
+				17124A111189630000BEF94F /* ofxSimplex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
