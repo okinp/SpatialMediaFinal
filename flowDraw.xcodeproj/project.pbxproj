@@ -14,6 +14,7 @@
 		171249FF118962EF00BEF94F /* ofxQuaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 171249F7118962EF00BEF94F /* ofxQuaternion.cpp */; };
 		17124A101189630000BEF94F /* ofxPerlin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17124A081189630000BEF94F /* ofxPerlin.cpp */; };
 		17124A111189630000BEF94F /* ofxSimplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17124A0A1189630000BEF94F /* ofxSimplex.cpp */; };
+		17124B5B1189FB1900BEF94F /* target.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17124B5A1189FB1900BEF94F /* target.cpp */; };
 		17BE104A1188A6BD001858FB /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17BE10491188A6BD001858FB /* particle.cpp */; };
 		17FDFBEE1180CEFE00E94F4B /* brush.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDFBED1180CEFE00E94F4B /* brush.cpp */; };
 		17FDFBF31180CF0D00E94F4B /* flowfield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17FDFBF21180CF0D00E94F4B /* flowfield.cpp */; };
@@ -114,6 +115,8 @@
 		17124A0B1189630000BEF94F /* ofxSimplex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSimplex.h; sourceTree = "<group>"; };
 		17124A0C1189630000BEF94F /* ofxSimplexTables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSimplexTables.h; sourceTree = "<group>"; };
 		17124A0D1189630000BEF94F /* ofxSinCosLUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSinCosLUT.h; sourceTree = "<group>"; };
+		17124B591189FB1900BEF94F /* target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = target.h; sourceTree = "<group>"; };
+		17124B5A1189FB1900BEF94F /* target.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = target.cpp; sourceTree = "<group>"; };
 		17BE10481188A6BD001858FB /* particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
 		17BE10491188A6BD001858FB /* particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle.cpp; sourceTree = "<group>"; };
 		17FDFBEC1180CEFE00E94F4B /* brush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brush.h; sourceTree = "<group>"; };
@@ -470,6 +473,8 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
+				17124B591189FB1900BEF94F /* target.h */,
+				17124B5A1189FB1900BEF94F /* target.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -647,6 +652,7 @@
 				171249FF118962EF00BEF94F /* ofxQuaternion.cpp in Sources */,
 				17124A101189630000BEF94F /* ofxPerlin.cpp in Sources */,
 				17124A111189630000BEF94F /* ofxSimplex.cpp in Sources */,
+				17124B5B1189FB1900BEF94F /* target.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

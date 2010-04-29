@@ -11,6 +11,8 @@ void testApp::setup(){
 	field=new flowfield(20);
 	showField=true;
 	noise.noiseSeed((int) ofRandom(0, 10000));
+	moveTarget =false;
+	forceTargetMagnitude=15;
 }
 
 //--------------------------------------------------------------
@@ -19,18 +21,36 @@ void testApp::update(){
 		myBrush->pos.x=mouseX;
 		myBrush->pos.y=mouseY;
 	} else {
+		removeMe.clear();
 		for (int i=0; i<Worms.size(); i++) {
 			ofxVec3f wPos=Worms[i]->Parts[0]->pos;
-			cout << wPos.x<< " ";
+			//cout << wPos.x<< " ";
 			Worms[i]->acc=field->lookup(wPos);
-			//Adding a force towards the mouse  (we'll remove it later on);
-			//ofxVec3f diff= (ofxVec3f(mouseX, mouseY,0)-Worms[i]->Parts[0]->pos);
-			//diff.normalize();
-			//diff*=10;
-			//Worms[i]->acc+=diff;
-			////////////////////////////////
+			ofxVec3f forceTarget=myTarget.pos-Worms[i]->Parts[0]->pos;
+			forceTarget.normalize();
+			forceTarget*=forceTargetMagnitude;
+			Worms[i]->acc+=forceTarget;
 			Worms[i]->update();
+			if (Worms[i]->checkTargetAndBounds(myTarget)) {
+				removeMe.push_back(i);
+			}
 		}
+		for (int i =0; i<removeMe.size(); i++){
+			Worms.erase(Worms.begin()+removeMe[i]);		
+			
+		}
+	}
+	///check if the worms are in the target or outside of the screen
+	
+	
+	
+	
+	
+	
+	
+	
+	if (moveTarget){
+		myTarget.pos=ofxVec3f(mouseX,mouseY,0);
 	}
 }
 
@@ -44,6 +64,7 @@ void testApp::draw(){
 			Worms[i]->draw();
 		}
 	}
+	myTarget.draw();
 }
 
 
@@ -57,6 +78,9 @@ void testApp::keyPressed  (int key){
 	}
 	if (key=='n') {
 		field->init(10);
+	}
+	if (key=='t') {
+		moveTarget=!moveTarget;
 	}
 }
 

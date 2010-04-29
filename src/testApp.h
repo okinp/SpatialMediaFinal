@@ -8,6 +8,7 @@
 #include "particle.h"
 #include "worm.h"
 #include "ofxPerlin.h"
+#include "target.h"
 
 class testApp : public ofBaseApp{
 	
@@ -29,7 +30,11 @@ class testApp : public ofBaseApp{
 	worm *w;
 	//vector <particle> Particles;
 	vector <worm*> Worms;
+	vector <int> removeMe;
 	ofxPerlin noise;
+	target myTarget;
+	bool moveTarget;
+	float forceTargetMagnitude;
 };
 
 #endif

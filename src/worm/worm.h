@@ -14,13 +14,16 @@
 #include "ofMain.h"
 #include "ofxVectorMath.h"
 #include "wormParts.h"
+#include "target.h"
 
 class worm{
 public:
 	worm(ofxVec3f _pos, ofxVec3f _vel);
+	~worm();
 	float maxVel;
 	void update();
 	void draw();
+	bool checkTargetAndBounds(target _target);
 	int maxDist;
 	ofxVec3f vel;
 	ofxVec3f pos;
